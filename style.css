@@ -1,0 +1,182 @@
+@font-face {
+  font-family: DubaiL;
+  src: url(../fonts/DUBAI-LIGHT.TTF);
+}
+
+
+body{
+  font-family: Arial, sans-serif;
+  font-weight: bold;    
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  font-size: 40px;
+  min-width: 100%;
+  color: hsl(0, 0%, 20%);
+}
+.choices{
+  margin-bottom: 30px;
+}
+
+.choices button{
+  font-size: 5.5rem;
+  min-width: 25%;
+  margin: 0 10px;
+  border-radius: 10%;
+  background-color: #fefefe;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.choices button:hover{
+  box-shadow: 0 0 10px hsl(0, 2%, 72%);
+}
+
+#computerDisplay, #playerDisplay{
+  font-size: 2rem;
+  font-family: DubaiL;
+}
+
+#resultDisplay{
+  font-size: 4rem;
+  margin: 30px 0;
+  font-family: DubaiL;
+}
+#comScoreDisplay, #plyScoreDisplay{
+  font-size: 2rem;
+}
+
+#playerScoreDisplay{
+  color: hsl(130, 84%, 54%);
+}
+
+
+#computerScoreDisplay{
+  color: hsl(0, 84%, 60%);
+}
+
+#popUp{
+  margin-top: 200px;
+  width: 800px;
+  height: 550px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: 3px 3px 3px 3px lightgray;
+}
+
+#popUpTitle{
+  font-family: DubaiM;
+  font-size: 150%;
+  font-weight: bold;
+}
+#popUpMsg{
+  padding-top: 65px;
+  font-family: DubaiL;
+}
+
+#reloadBtn{
+  font-size: 120%;
+  border: none;
+  border-radius: 10px;
+  background-color: blueviolet;
+  color: white;
+  font-family: DubaiL;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.65s ease-in-out;
+  margin-top:50px;
+}
+
+#reloadBtn:hover{
+  background-color: rgb(154, 14, 138);
+
+}
+
+#success{
+  display: none;
+  margin-top: 10px;
+  border-radius: 10000rem;
+  padding-right: 12%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 12%;
+  border: 7px solid #2aff5b;
+  font-size: 0px;
+}
+#success #tick{
+  color: #2aff5b;
+  font-size: 40px;
+} 
+
+#failure{
+  display: none;
+  margin-top: 10px;
+  border-radius: 1000rem;
+  padding-right: 12%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 12%;
+  border: 7px solid #ff2a23;
+
+}
+#X{
+  color: #ff2a23;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 700px){
+  #title{
+      font-size: 2.1rem;
+      font-family: DubaiL;
+  }
+  #popUpTitle{
+      margin: 0;
+      padding: 0;
+  }
+  #computerDisplay, #playerDisplay{
+      font-size: 1.4rem;
+      margin-bottom: 0;
+      margin-top: 0;
+  }
+  .choices{
+      margin: 0;
+  }
+  #popUp{
+      width: 81%;
+      height: 75%;
+      margin-bottom: 50px;
+      border-radius: 10%;
+      background-color: rgb(238, 236, 236);
+  }
+  #success #tick{
+      padding: 15px 0px;
+      margin: 0;
+  }
+  #failure{
+      margin-bottom: 20px;
+      border: 3px solid #ff2a23;
+
+  } 
+  #failure #X{
+      padding: 20px 0px;
+      margin: 0;
+  }
+  #success{
+      margin-bottom: 20px;
+      border: 3px solid #2aff5b;
+  } 
+  #popUp #popUpMsg{
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+}
